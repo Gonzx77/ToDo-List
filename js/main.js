@@ -1,5 +1,33 @@
-let container = document.querySelector("#date");
+import { maquetar } from "./modules/app.js";
 
+await maquetar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let container = document.querySelector("#date");
 function actualizarFechaHora() {
     let fechaHoraActual = new Date();
     let añoActual = fechaHoraActual.getFullYear();
