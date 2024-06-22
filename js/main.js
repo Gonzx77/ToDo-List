@@ -1,22 +1,24 @@
-import { maquetar } from "./modules/app.js";
-
+import { maquetar, add, remove } from "./modules/app.js";
 await maquetar();
 
 
+let addBtn = document.querySelector("#sBS2");
 
+addBtn.addEventListener("click", async() => {
+    let task = document.querySelector("#searchinput");
+    task = task.value;
 
+    await add(task);
+    await(maquetar());
+});
 
+const removeElement = async(element) =>{
+    let id = element.id;
 
-
-
-
-
-
-
-
-
-
-
+    await(remove(id));
+    await(maquetar());
+};
+document.removeElement = removeElement;
 
 
 
