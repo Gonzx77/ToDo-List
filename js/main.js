@@ -1,4 +1,4 @@
-import { maquetar, add, remove } from "./modules/app.js";
+import { maquetar, add, remove, status } from "./modules/app.js";
 await maquetar();
 
 
@@ -20,13 +20,13 @@ const removeElement = async(element) =>{
 };
 document.removeElement = removeElement;
 
+const finished = async(element) =>{
+    let id = element.id;
 
-
-
-
-
-
-
+    await status(id);
+    await maquetar();
+};
+document.finished = finished;
 
 
 let container = document.querySelector("#date");
